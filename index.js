@@ -250,7 +250,7 @@ module.exports = function(directory, options, callback) {
     };
 
     if (options.githubApi) {
-      var remotes = remotes({
+      var remotes = Remotes({
         out:          installDirectory,
         local:        true,
         timeout:      options.timeout,
