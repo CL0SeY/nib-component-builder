@@ -8,6 +8,7 @@ var builder   = require('component-builder');
 
 var proxy     = require('proxy-agent');
 var Remotes   = require('component-remotes');
+var GitHub    = Remotes.github;
 
 /**
  * Create a directory if it doesn't already exist
@@ -250,14 +251,14 @@ module.exports = function(directory, options, callback) {
     };
 
     if (options.githubApi) {
-      var remotes = Remotes({
+      var remotes = new Remotes({
         out:          installDirectory,
         local:        true,
         timeout:      options.timeout,
         retries:      options.retries
       });;
-      remotes.use(new Remotes.GitHub({
-	githubApi:    options.githubApi
+      remotes.use(new GitHub({
+        githubApi:    options.githubApi
       }));
 
       resolveOptions.remotes = remotes;
