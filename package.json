@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "component-builder": "~1.1.13",
-    "component-remotes": "~1.1.9",
+    "component-remotes": "git://github.com/CL0SeY/remotes.js.git#feature-custom-url",
     "component-resolver": "^1.2.4",
     "component-validator": "~1.1.1",
     "proxy-agent": "~1.1.0"
