@@ -260,7 +260,7 @@ module.exports = function(directory, options, callback) {
       remotes.use(new GitHub({
         githubApi:    options.githubApi
       }));
-
+      console.log('githubApi:', options.githubApi);
       resolveOptions.remotes = remotes;
     } else {
       resolveOptions.timeout = options.timeout;
